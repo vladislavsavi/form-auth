@@ -1,0 +1,18 @@
+{
+    "src": "./",
+    "dist": "./resources/",
+    "jsBudgetLimit": 1000,
+    "jsBudgetPath": "./resources/assets/js/components/*.vue",
+    "manifestPath": "./src/manifest.json",
+    "readableAssets": {
+        "./src/assets/": "/assets/"
+    },
+    "serverScripts": [
+        "yarn watch",
+        "start",
+        "dev",
+        "serve",
+        "server",
+        "watch"
+    ]
+}

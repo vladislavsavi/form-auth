@@ -1,0 +1,159 @@
+#authorization {
+  //родительский компонент
+  .email-enter-active, .email-leave-active {
+    transition: opacity .3s ease;
+  }
+  .email-enter, .email-leave-to {
+    opacity: 0;
+  }
+
+  //панель ввода mail-а
+  .input-wraper {
+    margin: 35px 0;
+  }
+
+  //Класс для footer-а в панелях авторизации
+  .termsOfUse {
+    font-size: 11px;
+    font-family: Roboto;
+    margin-top: 25px;
+    padding-top: 9px;
+    border-top: 1px solid #b3afaf;
+    text-align: left;
+    a{
+      cursor: pointer;
+    }
+  }
+  //класс для инпутов email и pass
+  .custom-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #1790d48c;
+    height: 35px;
+    outline: none;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  //общий класс кнопки
+  .custom-btn {
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 0;
+    background: linear-gradient(to bottom, #d98833 1%, #b65318 100%);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .4);
+    transition: all linear .1s;
+    outline: none;
+    &:hover{
+      box-shadow: inset 0 0 3px 1px rgba(0,0,0,.2), inset 0 0 4px 0 rgba(255,255,255,.2), 0 0 2px 0 rgba(0,0,0,.4);
+    }
+    &:active{
+      box-shadow: inset 0 2px 3px 1px rgba(0,0,0,.2), inset 0 -1px 4px 0 rgba(255,255,255,.2), 0 0 2px 0 rgba(0,0,0,.4);
+    }
+  }
+
+  //предупреждение в PASS
+  .warningMessage {
+    width: 100%;
+    font-size: 12px;
+    span {
+      font-weight: bold;
+      color: #000;
+    }
+    a {
+      cursor: pointer;
+    }
+  }
+  //класc для input пинкода
+  .custom-arr-input-code {
+    display: inline-block;
+    width: 35px;
+    border: none;
+    border-bottom: 2px solid $text-color;
+    border-radius: 0px;
+    text-align: center;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0 5px;
+    padding: 0;
+
+    &:focus {
+      border-radius: 0px;
+      text-align: center;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      border-bottom: 2px solid #13c7e4;
+      outline: none;
+      color: #13c7e4;
+    }
+    &::selection{
+      background: #fff !important;
+      color: #636b6f;
+      color: #13c7e4;
+    }
+  }
+  //класc для input телефона
+  .custom-arr-input-phone {
+    display: inline-block;
+    width: 20px !important;
+    border: none;
+    border-bottom: 2px solid $text-color;
+    border-radius: 0px;
+    text-align: center;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0 5px;
+    padding: 0;
+
+    &:focus {
+      border-radius: 0px;
+      text-align: center;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      border-bottom: 2px solid #13c7e4;
+      outline: none;
+      color: #13c7e4;
+    }
+    &::selection{
+      background: #fff !important;
+      color: #13c7e4;
+    }
+  }
+
+  //клас для кнопки перехода на шаг назад
+  .step-prev {
+    font-size: 12px;
+    color: #579fd1;
+    cursor: pointer;
+    margin-bottom: 25px;
+  }
+  //класс для алертов с выбором
+  .you-email {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor:pointer;
+    span:hover{
+      color: #333 !important;
+    }
+    &:hover {
+      background-color: #eaeaea;
+    }
+  }
+}
