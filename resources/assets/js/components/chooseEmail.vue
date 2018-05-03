@@ -1,18 +1,13 @@
 <template>
-    <div class="col">
-        <div class="alert">
-            <h3>{{options.title}}</h3>
+    <form @submit.prevent>
+        <div class="control-group">
+            <h1>{{options.title}}</h1>
+            <label class="control control-radio" v-for="(item, i) in emails">First radio
+                <input type="radio" name="radio" :id="'radio'+i" :value="item"/>
+                <div class="control-indicator"></div>
+            </label>
         </div>
-        <transition-group name="list">
-            <div class="alert you-email" role="alert" v-on:click.prevent="choose" v-for="(item, i) in emails" :mail="item" :key="i" :id="i">
-                <strong :mail="item">{{ item }}</strong>
-                <span :key="i" style="font-size: 15px; color: #888585" v-on:click.prevent="removeEmail" class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
-            </div>
-        </transition-group>
-        <div class="alert text-center">
-            <button class="input-other-email" :class="options.btn.class" v-on:click="ipnutOtherEmail">Ввести другой email</button>
-        </div>
-    </div>
+    </form>
 </template>
 
 <script>

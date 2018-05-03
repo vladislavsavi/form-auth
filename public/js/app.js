@@ -55779,11 +55779,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['options'],
@@ -55827,63 +55822,36 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
-    { staticClass: "col" },
+    "form",
+    {
+      on: {
+        submit: function($event) {
+          $event.preventDefault()
+        }
+      }
+    },
     [
-      _c("div", { staticClass: "alert" }, [
-        _c("h3", [_vm._v(_vm._s(_vm.options.title))])
-      ]),
-      _vm._v(" "),
       _c(
-        "transition-group",
-        { attrs: { name: "list" } },
-        _vm._l(_vm.emails, function(item, i) {
-          return _c(
-            "div",
-            {
-              key: i,
-              staticClass: "alert you-email",
-              attrs: { role: "alert", mail: item, id: i },
-              on: {
-                click: function($event) {
-                  $event.preventDefault()
-                  return _vm.choose($event)
-                }
-              }
-            },
-            [
-              _c("strong", { attrs: { mail: item } }, [_vm._v(_vm._s(item))]),
+        "div",
+        { staticClass: "control-group" },
+        [
+          _c("h1", [_vm._v(_vm._s(_vm.options.title))]),
+          _vm._v(" "),
+          _vm._l(_vm.emails, function(item, i) {
+            return _c("label", { staticClass: "control control-radio" }, [
+              _vm._v("First radio\n            "),
+              _c("input", {
+                attrs: { type: "radio", name: "radio", id: "radio" + i },
+                domProps: { value: item }
+              }),
               _vm._v(" "),
-              _c("span", {
-                key: i,
-                staticClass: "glyphicon glyphicon-remove-sign",
-                staticStyle: { "font-size": "15px", color: "#888585" },
-                attrs: { "aria-hidden": "true" },
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    return _vm.removeEmail($event)
-                  }
-                }
-              })
-            ]
-          )
-        })
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "alert text-center" }, [
-        _c(
-          "button",
-          {
-            staticClass: "input-other-email",
-            class: _vm.options.btn.class,
-            on: { click: _vm.ipnutOtherEmail }
-          },
-          [_vm._v("Ввести другой email")]
-        )
-      ])
-    ],
-    1
+              _c("div", { staticClass: "control-indicator" })
+            ])
+          })
+        ],
+        2
+      )
+    ]
   )
 }
 var staticRenderFns = []
